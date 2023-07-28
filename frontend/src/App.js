@@ -16,7 +16,8 @@ import { createContext } from 'react';
 import axios from 'axios';
 export let dataContext=createContext();
 function App() {
-  let [tab,settab]=useState(false);
+   
+  let [tab,settab]=useState(true);
   console.log(Datafromjson)
   let data=Object.keys(Datafromjson);
 
@@ -41,7 +42,9 @@ let tabfunc=()=>{
     <span style={{backgroundColor:"black"}}>Siren</span>
      <span className='tabs'><button onClick={tabfunc}>Tab</button></span> </h2>
   </div>
-        <Reusablecomp2 />
+
+  {tab?(<Reusablecomp2 />) :""}
+        
       
         </div>        {/* //DIsplaycontainer */}
         
@@ -51,16 +54,16 @@ let tabfunc=()=>{
           <Home  />
           </dataContext.Provider>
         }/>      
-        <Route  path ='Home' element={
+        <Route  path ='/Home' element={
         <dataContext.Provider value={Datafromjson.home}>
           <Home  />
           </dataContext.Provider>
         }/>
-        <Route  path ='bollywood' element={<Bollywood data ={Datafromjson} />}/>
-        <Route  path ='hollywood' element={<Hollywood data ={Datafromjson} />}/>
-        <Route  path ='technology' element={<Technology data ={Datafromjson} />}/>
-        <Route  path ='food' element={<Food data ={Datafromjson} />}/>
-        <Route  path ='fitness' element={<Fitness data ={Datafromjson} />}/>
+        <Route  path ='/bollywood' element={<Bollywood data ={Datafromjson} />}/>
+        <Route  path ='/hollywood' element={<Hollywood data ={Datafromjson} />}/>
+        <Route  path ='/technology' element={<Technology data ={Datafromjson} />}/>
+        <Route  path ='/food' element={<Food data ={Datafromjson} />}/>
+        <Route  path ='/fitness' element={<Fitness data ={Datafromjson} />}/>
         <Route  path ='/individualdatapage/:index' element={<Individualdatapage  />}/>
        
         <Route  path =":Category" element={<Reusablecomp2  state ={Datafromjson}/>}/>

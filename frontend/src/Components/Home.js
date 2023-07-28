@@ -7,7 +7,7 @@ function Home(){
   console.log(myContext);
  
 let [arr,setarr]=useState([]);
-let api="http://localhost:3015/home"
+let api="https://bl0gbackend.onrender.com/Home"
   useEffect(()=>{
     axios.get(api)
     .then(res=>{

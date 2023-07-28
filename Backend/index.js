@@ -3,6 +3,8 @@ const app=express();
 const port =3015;
 const cors=require('cors');
 const fs=require('fs');
+
+//Middleware which reads JSON data
 app.use(express.json());
 const getdata=JSON.parse(fs.readFileSync('data.json'));
 const blogdata=JSON.parse(fs.readFileSync('blogdata.json'));

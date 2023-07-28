@@ -13,6 +13,7 @@ function Individualdatapage(){
        <h1 style={{width:"90vw",textAlign:"center"}}>{location.state.title}</h1>
        <img style={{width:"65vw"}} src={location.state.urlToImage}/>
        <p style={{width:"80vw",textAlign:"center"}}>{location.state.content}</p>
+       <button >Load More</button>
     </div>)
 }
 export default Individualdatapage;

@@ -6,7 +6,7 @@ let [arr,setarr]=useState([]);
 let [count,setcount]=useState(7);
 console.log(props.data);
 let item=props.data.hollywood; 
-let api="http://localhost:3015/hollywood"
+let api="https://bl0gbackend.onrender.com/hollywood"
   useEffect(()=>{
     axios.get(api)
     .then(res=>{

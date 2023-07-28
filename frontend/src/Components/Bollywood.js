@@ -7,7 +7,7 @@ let [count,setcount]=useState(7);
 console.log(props.data);
 let item=props.data.bollywood; 
 
-let api="http://localhost:3015/bollywood"
+let api="https://bl0gbackend.onrender.com/bollywood"
   useEffect(()=>{
     axios.get(api)
     .then(res=>{
@@ -32,7 +32,7 @@ return(
     {
 arr.map((item,index)=>{
     console.log(count)
-    if(index>0 && index<count){
+    if(index>1 && index<count){
         return(
                       <div  className='Navbar responsivenav'  id='leftcontainer'>
           

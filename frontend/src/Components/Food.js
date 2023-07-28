@@ -4,7 +4,7 @@ import axios from 'axios';
 function Food(props){
 
   let [arr,setarr]=useState([]);
-  let api="http://localhost:3015/food"
+  let api="https://bl0gbackend.onrender.com/food"
   useEffect(()=>{
     axios.get(api)
     .then(res=>{

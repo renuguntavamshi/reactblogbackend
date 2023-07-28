@@ -5,7 +5,7 @@ function Technology(props){
 let [arr,setarr]=useState([]);
 let [count,setcount]=useState(7);
 console.log(props.data);
-let api="http://localhost:3015/technology"
+let api="https://bl0gbackend.onrender.com/technology"
 
 useEffect(()=>{
   axios.get(api)
